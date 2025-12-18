@@ -1,2 +1,7 @@
 # .github
-template
+
+## Local dev
+
+```sh
+pre-commit install
+```

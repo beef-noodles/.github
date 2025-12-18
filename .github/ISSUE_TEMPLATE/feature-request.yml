@@ -1,0 +1,106 @@
+name: Feature Request
+description: Request a new feature
+title: "[Feature] "
+labels: [new-feature]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Request Detail
+
+        The issue list is reserved exclusively for bug reports and feature requests.
+
+        For usage questions, please use the following resources:
+
+        - Read the [docs](https://dev.github.io/)
+
+        For non-technical support or general questions, you can email [dev@dev.com](mailto:dev@dev.com).
+
+              Also try to search for your issue - it may have already been answered or even fixed in the development branch. However, if you find that an old, closed issue still persists in the latest version, you should open a new issue using the form below instead of commenting on the old issue.
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com or full name that we can connect you in Slack or WeCom
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Summary - What problem does this feature solve?
+      description: |
+        Explain your use case, context, and rationale behind this feature request. More importantly, what is the end user experience you are trying to build that led to the need for this feature?
+
+        An important design goal of this repo is keeping the API surface small and straightforward. In general, we only consider adding new features that solve a problem that cannot be easily dealt with using existing APIs (i.e. not just an alternative way of doing things that can already be done). The problem should also be common enough to justify the addition.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expectations
+      description: |
+        Explain your expectations
+      placeholder: |
+        1. Show data with chart
+        2. Can see the calculation method
+        3. ......
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Tools
+      description: What tools will support your request feature?
+      multiple: true
+      options:
+        - Board (like Jira)
+        - Pipeline Tool (like buildkite)
+        - Source Control (like github)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Account Detail
+
+        Let's know more about you and your account. We will horizontally evaluate all received requests to adjust the priority.
+
+        **Below information are important in terms of prioritization.**
+
+  - type: input
+    id: account_info
+    attributes:
+      label: Account name
+      description: What's your account name?
+      placeholder: Make sure it could be found in jigsaw
+    validations:
+      required: true
+
+  - type: input
+    id: account_location
+    attributes:
+      label: Account location
+      description: Which country you account locate at?
+    validations:
+      required: true
+
+  - type: input
+    id: account_size
+    attributes:
+      label: Teams in Account
+      description: How many teams will adopt this app after feature release?
+    validations:
+      required: true
+
+  - type: input
+    id: expected_date
+    attributes:
+      label: Expected launch date
+      description: What is the latest possible launch date you can accept?
+      placeholder: 2024-12
+    validations:
+      required: false
